@@ -1,0 +1,72 @@
+body {
+  font-family: "Helvetica", Georgia, Serif;
+}
+.wrapper {
+  margin: 1.5rem auto;
+  max-width: 80rem;
+  min-width: 60rem;
+}
+.wrapper button:hover {
+  opacity: 0.6;
+}
+.wrapper li {
+  list-style: none;
+}
+.wrapper button {
+  margin-left: 1.5rem;
+  border: 0.2rem solid #000;
+  border-radius: 0.5rem;
+  width: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.wrapper header {
+  font-size: 2.4rem;
+}
+.wrapper .list ul {
+  counter-reset: li;
+  display: initial;
+}
+.wrapper .list span {
+  font-size: 2rem;
+}
+.wrapper .list li {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  align-items: baseline;
+}
+.wrapper .list li:before {
+  font-size: 2.4rem;
+  font-weight: bold;
+  content: counter(li);
+  counter-increment: li;
+}
+.wrapper .list li:nth-child(even) {
+  background-color: #e0ffff;
+}
+.wrapper .list li:nth-child(odd) {
+  background-color: #d3d3d3;
+}
+.wrapper .list .edit-container {
+  float: right;
+}
+.wrapper .list .edit-container .edit {
+  background-color: #fff;
+}
+.wrapper .list .edit-container .del {
+  background-color: #ff7f50;
+}
+.wrapper .list input {
+  margin: 0 1rem;
+}
+.wrapper .list .btn-round {
+  margin-left: 1.5rem;
+  padding: 0.5rem;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+}
+.wrapper .list .checkRow {
+  text-decoration: line-through;
+}

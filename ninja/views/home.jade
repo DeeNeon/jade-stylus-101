@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	#wrapper
+		include header
+
+		#display
+			#login    
+				form(method='post')
+					| Enter your name if you want to be a ninja
+					div
+						input(type='text' name='username' required)
+						input(type='submit', value='Log In')
+		
+		include footer

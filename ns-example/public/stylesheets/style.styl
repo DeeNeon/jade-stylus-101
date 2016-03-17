@@ -1,0 +1,73 @@
+
+body	
+	font-family: "Helvetica", Georgia, Serif
+ 
+.wrapper
+	margin: 1.5rem auto
+	max-width: 80rem
+	min-width: 60rem
+	
+	button:hover
+		opacity .6
+		
+	li
+		list-style none
+
+	button
+		margin-left 1.5rem
+		border .2rem solid black
+		border-radius .5rem
+		width 3rem
+		padding .5rem
+		cursor pointer
+
+	header
+		font-size 2.4rem
+
+	.list
+		ul
+			counter-reset li
+			display initial
+
+		span
+			font-size 2rem
+
+		li
+			margin 1.5rem 0
+			padding 1rem
+			border 2px solid black
+			border-radius .5rem
+			align-items baseline
+
+			&:before
+				font-size 2.4rem
+				font-weight bold
+				content counter(li)
+				counter-increment li
+				
+			&:nth-child(even)		
+				background-color lightcyan
+				
+			&:nth-child(odd)				
+				background-color lightgray
+
+		.edit-container
+			float right
+			
+			.edit
+				background-color white
+				
+			.del
+				background-color coral
+
+		input
+			margin 0 1rem
+
+		.btn-round
+			margin-left 1.5rem
+			padding .5rem
+			border 2px solid black
+			border-radius .5rem
+
+		.checkRow
+			text-decoration line-through

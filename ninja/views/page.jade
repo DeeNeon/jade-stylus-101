@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	#wrapper
+		include header
+		
+		#display
+			include userbar
+
+			.panel.panel-default
+				.panel-body
+					p!= content
+
+		include footer

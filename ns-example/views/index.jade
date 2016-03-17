@@ -1,0 +1,38 @@
+extends layout
+
+mixin row(title)
+	li.list-group-item.col-xs-12
+
+		input(type="checkbox" checked=false data-action="checkRow")
+		span= title
+
+		span.edit-container
+			button.btn.btn-round.edit(data-action='editRow')
+				i.fa.fa-pencil
+			button.btn.btn-round.del(data-action='delRow')
+				i.fa.fa-trash
+
+block content
+	.container-fluid
+		.row
+			.col-xs-12
+				.wrapper
+					header
+						.row
+							.col-xs-4
+								img(src="/images/ns-logo.png")
+							.col-xs-4.text-center
+								h2 Playlist
+							.col-xs-4.col-sm-4.text-right
+								button.btn.btn-round(data-action='addRow')
+									i.fa.fa-plus
+								button.btn.btn-round(data-action='load')
+									i.fa.fa-download
+								button.btn.btn-round(data-action='save')
+									i.fa.fa-save
+
+					section
+						.list
+							ul.list-group.row
+								each value in ["Element 1","Element 2","Element 3","Element 4", "Element 5"]
+									+row(value)

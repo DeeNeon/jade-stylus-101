@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	#wrapper
+		include header
+			
+		#display
+			include userbar
+
+			.panel.panel-default
+				.panel-body
+					p The #{name.toLowerCase()} is one of the must-have items for any aspiring ninja. It costs just $#{price} on our store.					
+					strong.label.label-success Buy it today!
+
+		include footer
